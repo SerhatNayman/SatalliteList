@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="satallite"
+        type="com.example.satallitesapp.model.SatallitesList" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/imgDurum"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/img_pasive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/satallitesName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571">
+            tools:layout_editor_absoluteY="47dp"></ImageView>
+
+        <TextView
+            android:id="@+id/satallitesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="171dp"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="1dp"
+            android:text="Starship-1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/durum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgDurum"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.503"
+            app:layout_constraintVertical_chainStyle="packed"></TextView>
+
+        <TextView
+            android:id="@+id/durum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/satallitesName"
+            app:layout_constraintTop_toBottomOf="@+id/satallitesName"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
